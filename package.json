@@ -1,0 +1,17 @@
+{
+  "name": "vsts-pipelines",
+  "version": "0.0.1",
+  "description": "A piplelines view of VSTS Build and Release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vsts",
+    "pipelines",
+    "build",
+    "monitor"
+  ],
+  "author": "Timothy Foster",
+  "license": "MIT"
+}
