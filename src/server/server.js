@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import path from 'path';
 import express from 'express';
 import { render } from './middleware';
@@ -15,6 +16,6 @@ app.use(express.static(path.join(__dirname)));
 
 app.get('*', render);
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
