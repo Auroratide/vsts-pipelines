@@ -13,7 +13,8 @@
     "clean": "rm -rf dist/",
     "test": "npm-run-all lint test:all",
     "test:all": "npm-run-all test:unit",
-    "test:unit": "NODE_ENV=test mocha --require babel-core/register --require ignore-styles --require ./test/enzyme-setup.js './src/**/*.spec.{js,jsx}'",
+    "test:unit": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
     "lint": "eslint 'src/**/*.{js,jsx}'"
   },
   "keywords": [
@@ -39,19 +40,21 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^23.0.0-alpha.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "chai": "^4.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.0",
+    "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-react": "^7.7.0",
-    "ignore-styles": "^5.0.1",
-    "mocha": "^4.1.0",
+    "jest": "^22.4.2",
     "npm-run-all": "^4.1.2",
-    "testdouble": "^3.5.2",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>test/setup/enzyme-setup.js"
   }
 }

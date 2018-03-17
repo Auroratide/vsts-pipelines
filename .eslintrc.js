@@ -3,9 +3,9 @@ module.exports = {
     "node": true,
     "browser": true,
     "es6": true,
-    "mocha": true
+    "jest/globals": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jest/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -13,7 +13,7 @@ module.exports = {
     },
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "jest"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],

@@ -1,16 +1,15 @@
-import td from 'testdouble';
 import { render } from '.';
 
 describe('Middleware', () => {
   describe('render', () => {
-    it('should render a page', () => {
+    it('renders a page', () => {
       const res = {
-        render: td.function()
+        render: jest.fn()
       };
 
       render(null, res);
 
-      td.verify(res.render('index', {}));
+      expect(res.render).toBeCalledWith('index', {});
     });
   });
 });
