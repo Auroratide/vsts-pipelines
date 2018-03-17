@@ -1,8 +1,9 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = [ {
   name: 'server',
   target: 'node',
+  mode: 'development',
   devtool: 'eval-source-map',
   entry: path.join(__dirname, 'src', 'server', 'server.js'),
   output: {
@@ -10,17 +11,18 @@ module.exports = [ {
     path: path.join(__dirname, 'dist')
   },
   module: {
-    loaders: [ {
+    rules: [ {
       test: /\.js$/,
       loader: ['babel-loader']
     } ]
   },
   node: {
     __dirname: false,
-    __filename: false,
+    __filename: false
   }
 }, {
   name: 'client',
+  mode: 'development',
   entry: path.join(__dirname, 'src', 'client', 'client.jsx'),
   devtool: 'eval-source-map',
   output: {
@@ -31,7 +33,7 @@ module.exports = [ {
     extensions: ['.js', '.jsx', '.css']
   },
   module: {
-    loaders: [ {
+    rules: [ {
       test: /\.jsx?$/,
       loader: ['babel-loader']
     } ]
