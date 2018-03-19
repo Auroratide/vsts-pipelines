@@ -39,7 +39,14 @@ module.exports = [ {
       loaders: ExtractTextPlugin.extract( {
         fallback: 'style-loader',
         use: [ {
-          loader: 'css-loader?importLoader=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
+          loader: 'css-loader',
+          options: {
+            importLoader: 1,
+            modules: true,
+            localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+          }
+        }, {
+          loader: 'postcss-loader'
         } ]
       } )
     }, {
