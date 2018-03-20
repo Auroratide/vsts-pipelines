@@ -1,18 +1,19 @@
 @import 'palette';
+@import 'typography';
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: #303030;
-  font-size: 16px;
+  background: var(--dark-grey);
+  font-size: var(--base-size);
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--sans);
 }
 
 .app {
-  color: #FFFFFF;
+  color: var(--white);
 }
