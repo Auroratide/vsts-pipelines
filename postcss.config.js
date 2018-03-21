@@ -5,7 +5,6 @@ module.exports = {
     require('postcss-import')({
       path: [path.resolve(__dirname, 'src', 'client', 'styles')]
     }),
-    require('postcss-cssnext'),
-    require('autoprefixer')
+    require('postcss-cssnext')
   ]
 };

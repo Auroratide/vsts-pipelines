@@ -43,7 +43,7 @@ module.exports = [ {
           options: {
             importLoader: 1,
             modules: true,
-            localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+            localIdentName: '[local]-[hash:base64:8]'
           }
         }, {
           loader: 'postcss-loader'

@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.style.css';
+import styles from  './App.style.css';
 
-const App = () => <div styleName='app'>
-  <p>Hello World</p>
-</div>;
+import Login from '../Login';
+
+const App = () =>
+  <main className={styles.app}>
+    <Login />
+  </main>;
 
 export default App;
