@@ -1,11 +1,15 @@
 import React from 'react';
-import styles from  './App.style.css';
-
+import { Provider } from 'mobx-react';
+import store from '../../store';
 import Login from '../Login';
 
+import styles from  './App.style.css';
+
 const App = () =>
-  <main className={styles.app}>
-    <Login />
-  </main>;
+  <Provider store={store}>
+    <main className={styles.app}>
+      <Login />
+    </main>
+  </Provider>;
 
 export default App;

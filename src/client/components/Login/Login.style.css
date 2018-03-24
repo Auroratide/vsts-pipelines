@@ -2,3 +2,7 @@
   background: white;
   color: #303030;
 }
+
+.submit {
+  display: none;
+}
