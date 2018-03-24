@@ -4,21 +4,13 @@ import LoginUIState from './Login.state';
 import styles from './Login.style.css';
 
 import Box from '../Box';
+import ControlledTextInput from '../ControlledTextInput';
 
 const Login = ({ login, ui }) =>
   <Box className={styles.login}>
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      login(ui.username, ui.personalAccessToken);
-    }}>
-      <div>
-        <label htmlFor='login-username'>Username</label>
-        <input id='login-username' type='text' value={ui.username} onChange={ui.onChangeUsername} />
-      </div>
-      <div>
-        <label htmlFor='login-pat'>Personal Access Token</label>
-        <input id='login-pat' type='text' value={ui.personalAccessToken} onChange={ui.onChangePersonalAccessToken} />
-      </div>
+    <form onSubmit={ui.onSubmit(login)}>
+      <ControlledTextInput label='Username' value={ui.username} onChange={ui.onChangeUsername} />
+      <ControlledTextInput label='Personal Access Token' value={ui.personalAccessToken} onChange={ui.onChangePersonalAccessToken} />
       <input className={styles.submit} type='submit' value='clickme' />
     </form>
   </Box>;

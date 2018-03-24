@@ -11,4 +11,9 @@ export default class LoginUIState {
   onChangePersonalAccessToken = (e) => {
     this.personalAccessToken = e.target.value;
   }
+
+  onSubmit = (f) => (e) => {
+    e.preventDefault();
+    f(this.username, this.personalAccessToken);
+  }
 }
