@@ -1,6 +1,28 @@
+@import 'palette';
+
 .login {
-  background: white;
-  color: #303030;
+  background: var(--white);
+  color: var(--dark-grey);
+
+  align-items: center;
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  bottom: 20%;
+  left: 20%;
+  padding: 1rem;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  max-width: 20rem;
+  margin: auto;
+}
+
+.input {
+  margin-bottom: 2rem;
 }
 
 .submit {

@@ -4,29 +4,29 @@
 .controlled-text-input {
   display: flex;
   flex-direction: column;
+}
 
-  & label {
-    @apply --bold;
-    @apply --sm;
-    
-    flex: 1;
-    margin-bottom: 0.25rem;
-  }
+.controlled-text-input label {
+  @apply --bold;
+  @apply --sm;
+  
+  flex: 1;
+  margin-bottom: 0.25rem;
+}
 
-  & input {
-    @apply --sans;
-    @apply --md;
+.controlled-text-input input {
+  @apply --sans;
+  @apply --md;
 
-    flex: 1;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid var(--light-grey);
-    border-radius: 0.125rem;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25) inset
-  }
+  flex: 1;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.125rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25) inset
+}
 
 
-  & input:focus {
-    border-color: var(--success);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
-  }
+.controlled-text-input input:focus {
+  border-color: var(--success);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) inset;
 }

@@ -9,8 +9,8 @@ import ControlledTextInput from '../ControlledTextInput';
 const Login = ({ login, ui }) =>
   <Box className={styles.login}>
     <form onSubmit={ui.onSubmit(login)}>
-      <ControlledTextInput label='Username' value={ui.username} onChange={ui.onChangeUsername} />
-      <ControlledTextInput label='Personal Access Token' value={ui.personalAccessToken} onChange={ui.onChangePersonalAccessToken} />
+      <ControlledTextInput className={styles.input} label='Username' value={ui.username} onChange={ui.onChangeUsername} />
+      <ControlledTextInput className={styles.input} label='Personal Access Token' value={ui.personalAccessToken} onChange={ui.onChangePersonalAccessToken} />
       <input className={styles.submit} type='submit' value='clickme' />
     </form>
   </Box>;
